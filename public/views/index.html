@@ -1,3 +1,26 @@
 <section data-ng-controller="IndexController">
-	<h1>This is the home view</h1>
+	<h1>Hi, {{global.user.name}} </h1>
+        <a href="{{userprofile.publicProfileUrl}}" target="_blank"> 
+                <img class="img-polaroid" ng-src="{{global.user.pictureUrl}}"/>
+        </a>
+	<p>This is the postrefers view.</p>
+	<div class="leftcountainer .col-xs-3">
+	<ul class="nav nav-tabs">
+  		<li><a href="#linkedinConnections" data-toggle="tab">LinkedIn</a></li>
+  		<li><a href="#twitter" data-toggle="tab">Twitter</a></li>
+	</ul>
+
+	<div ng-cloak>
+ 	 <div class='list1' droppable>
+    <div class='btn btn-info btn-block' ng-repeat="item in list1" data-index="{{$index}}" data-reject="{{item.reject}}"   draggable>{{item.name}}</div>
+  	</div>
+	</div>
+
+<div class="rightcountainer .col-xs-3">
+  
+  <div class='list2 thumbnail' droppable>
+    <div class='btn btn-info btn-block' ng-repeat="item in list2" data-index="{{$index}}" data-reject="{{item.reject}}"  draggable>{{item.name}}</div>
+	</div>
+</div>
+</div>>
 </section>

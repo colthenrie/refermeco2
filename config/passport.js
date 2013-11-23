@@ -191,6 +191,8 @@ module.exports = function(passport) {
                          name: profile.displayName,
                          email: profile.emails[0].value,
                          username: profile.emails[0].value,
+                         linkedin_id: profile.id,
+                         picture_url: profile.pictureUrl,
                          provider: 'linkedin',
                          'linkedin': profile._json
                   });

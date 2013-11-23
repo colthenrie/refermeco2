@@ -18,6 +18,8 @@ var UserSchema = new Schema({
         type: String,
         unique: true
     },
+    linkedin_id: String,
+    picture_url: String,
     provider: String,
     hashed_password: String,
     salt: String,
@@ -25,7 +27,8 @@ var UserSchema = new Schema({
     twitter: {},
     github: {},
     google: {},
-    linkedin: {}
+    linkedin: {},
+    my_li_connections: {}
 
 });
 
